@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tipcalculatortoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TipInput"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="180dp"
+        android:ems="10"
+        android:hint="@string/tip_input_label"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipcalculatortoolbar" />
+
+    <TextView
+        android:id="@+id/TotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/total_label"
+        app:layout_constraintBottom_toTopOf="@+id/TipSeekerLabel"
+        app:layout_constraintEnd_toStartOf="@+id/TipInput"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipcalculatortoolbar"
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/TipSeekerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tip_slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TipInput" />
+
+    <TextView
+        android:id="@+id/TipPercentValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tip_percent_value"
+        app:layout_constraintStart_toEndOf="@+id/TipSeekerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/TipInput" />
+
+    <SeekBar
+        android:id="@+id/TipSeekBar"
+        android:layout_width="286dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TipPercentValue"
+        app:layout_constraintTop_toBottomOf="@+id/TipInput" />
+
+    <EditText
+        android:id="@+id/TaxInput"
+        android:layout_width="128dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/tip_input_label"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/TaxLabel"
+        app:layout_constraintTop_toBottomOf="@+id/TipSeekBar"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/TaxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/tax_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TipSeekerLabel" />
+
+    <Switch
+        android:id="@+id/TaxSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/on_off_tax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TipSeekBar" />
+
+    <TextView
+        android:id="@+id/PeopleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/people_slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TaxLabel" />
+
+    <TextView
+        android:id="@+id/PeopleAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/people_value"
+        app:layout_constraintStart_toEndOf="@+id/PeopleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/TaxLabel" />
+
+    <SeekBar
+        android:id="@+id/PeopleSeekBar"
+        android:layout_width="157dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toEndOf="@+id/PeopleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/TaxLabel" />
+
+    <Switch
+        android:id="@+id/PeopleSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/on_off_people"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TaxLabel" />
+
+    <TextView
+        android:id="@+id/TotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/total_cost_label"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PeopleLabel" />
+
+    <TextView
+        android:id="@+id/TotalCostValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/total_cost_value"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/TotalCost"
+        app:layout_constraintTop_toBottomOf="@+id/PeopleLabel" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tipcalculatortoolbar"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        android:focusable="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

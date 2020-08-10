@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="username_input_field">Username:</string>
+    <string name="email_input_field">Email:</string>
+    <string name="password_input_field">Password:</string>
+    <string name="confirm_password_input_field">Confirm Password:</string>
+    <string name="create_account_link_text">Create New Account</string>
+    <string name="login_account_link_text">Already have an account? Login here</string>
+    <string name="login_button">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="menu_button">Menu Button</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="tip_input_label">Enter Amount:</string>
+    <string name="total_label">Total ($):</string>
+    <string name="tip_slider">Tip:</string>
+    <string name="tip_percent_value">0%</string>
+    <string name="tax_label">Tax:</string>
+    <string name="on_off_tax">Tip Before Tax</string>
+    <string name="people_slider">People:</string>
+    <string name="people_value">1</string>
+    <string name="on_off_people">Split Disabled</string>
+    <string name="total_cost_label">Total Cost:</string>
+    <string name="total_cost_value">$0.00</string>
+    <string name="arrow_back">Arrow Back</string>
+    <string name="button_submit_search">Load</string>
+    <string name="game">Game</string>
+    <string name="stream">Stream</string>
+    <string name="like_button">Like Button</string>
+    <string name="backdrop">Backdrop</string>
+</resources>
